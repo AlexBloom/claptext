@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>
+      Clap Text
+    </title>
+    <meta name="author" content="Alex Bloom">
+    <meta name="description" content="Clap between your text.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/mnml.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </head>
+  <body class="p-l">
+    <h1 class="text-center">Clap 👏 Text</h1>
+    <p id="textToClapify" contentEditable="true"
+    style="
+    margin:auto;
+    max-width:30rem;
+    border:1px solid black;
+    "
+    >Try it out!</p>
+    <!-- <input id="rawText" type="textarea" placeholder="enter your text here"> -->
+    <input id="clapIt" type="button" value="Clap👏It!" style="margin:auto;display:block;padding:2rem;" />
+
+    <script>
+
+      $("#clapIt").click(function() {
+        $("#textToClapify").each(function() {
+            $(this).html($(this).html().replace(/ /g,"👏"));
+        });
+      });
+    </script>
+
+  </body>
+</html>
